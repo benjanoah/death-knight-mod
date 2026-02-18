@@ -28,7 +28,12 @@ public class DeathKnightCastlePiece extends SimpleStructurePiece {
 
     // Constructor voor deserialisatie (laden van wereld)
     public DeathKnightCastlePiece(StructureContext context, NbtCompound nbt) {
-        super(ModStructures.DEATH_KNIGHT_CASTLE_PIECE, context, nbt);
+        super(
+            ModStructures.DEATH_KNIGHT_CASTLE_PIECE,
+            nbt,
+            context.structureTemplateManager(),
+            id -> new StructurePlacementData()
+        );
     }
 
     @Override
