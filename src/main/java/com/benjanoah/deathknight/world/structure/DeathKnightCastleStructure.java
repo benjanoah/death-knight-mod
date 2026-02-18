@@ -1,6 +1,7 @@
 package com.benjanoah.deathknight.world.structure;
 
-import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
@@ -12,14 +13,17 @@ import java.util.Optional;
 
 public class DeathKnightCastleStructure extends Structure {
 
-    public static final Codec<DeathKnightCastleStructure> CODEC =
-        Structure.settingsCodec(DeathKnightCastleStructure::new);
+    public static final MapCodec<DeathKnightCastleStructure> CODEC =
+        RecordCodecBuilder.mapCodec(instance ->
+            instance.group(Structure.configCodecBuilder(instance))
+                .apply(instance, DeathKnightCastleStructure::new)
+        );
 
     private static final Identifier CASTLE_ID =
         new Identifier("death-knight-mod", "death_knight_castle");
 
-    public DeathKnightCastleStructure(StructureSettings settings) {
-        super(settings);
+    public DeathKnightCastleStructure(Structure.Config config) {
+        super(config);
     }
 
     @Override
@@ -37,7 +41,6 @@ public class DeathKnightCastleStructure extends Structure {
         );
 
         // Alleen spawnen als de hoogte geldig is voor Soul Sand Valley (Y 20-100)
-        // Als het te hoog of laag is, sla dan dit stuk over (spawn ergens anders)
         if (floorY < 20 || floorY > 100) {
             return Optional.empty();
         }
