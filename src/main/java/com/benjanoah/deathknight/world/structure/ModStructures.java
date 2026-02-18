@@ -24,7 +24,7 @@ public class ModStructures {
         DEATH_KNIGHT_CASTLE_TYPE = Registry.register(
             Registries.STRUCTURE_TYPE,
             new Identifier(DeathKnightMod.MOD_ID, "death_knight_castle"),
-            () -> DeathKnightCastleStructure.CODEC.codec()
+            () -> DeathKnightCastleStructure.CODEC
         );
 
         DeathKnightMod.LOGGER.info("Death Knight structures registered!");
