@@ -1,6 +1,6 @@
 package com.benjanoah.deathknight.entity.custom;
 
-import com.benjanoah.deathknight.item.ModItems;
+import net.minecraft.item.Items;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
@@ -25,8 +25,8 @@ public class DeathKnightEntity extends HostileEntity {
 
     public DeathKnightEntity(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
-        // Geef de Death Knight z'n zeis in de hand
-        this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(ModItems.SCYTHE));
+        // Geef de Death Knight een netherite sword
+        this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(Items.NETHERITE_SWORD));
     }
 
     @Override
