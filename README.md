@@ -1,46 +1,35 @@
-# Gladiator Arena Mod 🏛️⚔️
+# ☠️ Death Knight Mod
 
-A Minecraft Fabric mod featuring an epic Roman colosseum with gladiator battles and fierce lions!
+A Minecraft Fabric mod that adds the **Death Knight** — a giant skeleton armed with a scythe and deadly wither skull attacks!
 
-## Features (Planned)
+## Features
 
-- 🏛️ **Colosseum Structure** - Massive Roman arena
-- 🛡️ **Gladiator Mobs** - Armored warriors with swords and shields
-- 🦁 **Lion Mobs** - Fast and dangerous beasts
-- 👑 **Boss Gladiator** - Ultimate challenge
-- 🎟️ **Arena Ticket** - Item to start the battle
-- 🏆 **Victory Loot** - Unique rewards for champions
+- 💀 **Death Knight** mob — Warden-sized skeleton with a scythe
+- ⚔️ **Scythe Attack** — Powerful melee attack that inflicts Wither II
+- 💀 **Wither Skull** — Launches wither skulls at players from a distance
+- 🥚 **Spawn Egg** — Spawn the Death Knight in creative mode
 
-## Development
+## Stats
 
-**Minecraft Version:** 1.20.1  
-**Mod Loader:** Fabric  
-**Author:** Benjamin
+| Stat | Value |
+|------|-------|
+| ❤️ Health | 150 HP |
+| ⚔️ Attack | 8 damage + Wither II |
+| 🏃 Speed | Normal |
+| 🛡️ Armor | 4 |
+| 📏 Size | Warden-sized |
 
-### How to Build
+## Drops
 
-```bash
-./gradlew build
-```
+- 🦴 Bones (1-3)
+- 💀 Wither Skeleton Skull (rare, killed by player)
 
-### How to Run (Development)
+## Requirements
 
-```bash
-./gradlew runClient
-```
+- Minecraft 1.20.1
+- Fabric Loader 0.15.11+
+- Fabric API
 
-## Progress
+## Author
 
-- [x] Project setup
-- [ ] Arena ticket item
-- [ ] Colosseum structure
-- [ ] Teleport system
-- [ ] Gladiator entity
-- [ ] Lion entity
-- [ ] Wave system
-- [ ] Boss fight
-- [ ] Loot system
-
----
-
-Made with ⚔️ by Benjamin
+Made by **benjanoah** 🎮
