@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "death-knight-mod",
+  "version": "${version}",
+  "name": "Death Knight Mod",
+  "description": "Adds the Death Knight, a giant skeleton with a scythe and wither skull attacks!",
+  "authors": [
+    "benjanoah"
+  ],
+  "contact": {
+    "homepage": "https://github.com/benjanoah/death-knight-mod",
+    "sources": "https://github.com/benjanoah/death-knight-mod"
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.benjanoah.deathknight.DeathKnightMod"
+    ],
+    "client": [
+      "com.benjanoah.deathknight.DeathKnightModClient"
+    ]
+  },
+  "mixins": [],
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "fabric": "*",
+    "minecraft": "~1.20.1",
+    "java": ">=17"
+  }
+}
